@@ -1,7 +1,7 @@
 #Els moviments que realitza un braç robot estan codificats amb L,R,U i D. Ens entren
 #una seqüència de moviments i volem saber si més de la meitat són U.
+#mi versión
 
-#Version1
 
 cadena=input("Insereix la seqüència: ")
 cadena=cadena.upper()
