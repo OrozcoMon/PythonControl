@@ -16,4 +16,3 @@ for i in range (0,len(llista)):
     else:
         llista[i]=llista[i]**3
 print(llista)
-
