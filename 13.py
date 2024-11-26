@@ -15,6 +15,7 @@ while not (llista[index] % ult_ele == 0 or index == len(llista)-1):
     index+=1 #faig un bucle sumant les posicions de l'índex
 
 if index != len(llista)-1: 
-    print(llista[index])
+    del llista [index] #borra el múltiple
+    print(llista)
 else:
-    print("No hi ha")
+    print(llista,"No hi ha")
