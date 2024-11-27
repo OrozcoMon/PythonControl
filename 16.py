@@ -1,23 +1,20 @@
-# Lista para almacenar los números de la serie
 llista = []
+cadena = int(input("Nombre: "))
  
-# Entrada de números hasta que el usuario ingrese -1
-valor = int(input("Dame una serie de números acabados en -1: "))
+while cadena != -1:
+    llista.append(cadena)
+    cadena = int(input("Nombre: "))
+print(llista)
  
-while not valor == -1:
-    llista.append(valor)
-    valor = int(input("Dame una serie de números acabados en -1: "))
+n = float('-inf') #menys infinit=valor especial utilitzat per indicar un numero extremendament petit
+for i in range(0,len(llista)): 
+    if llista[i] > n: #al posar -inf qualsevol numero de la llista será major que n
+        n = llista[i] #assegura que el primer valor assignat a la llista sempre será llista[i] > n
  
-# Encontramos el número más grande en la lista
-num_max = max(llista)
- 
-# Encontramos los divisores del número más grande      
-div = []
- 
-for num in llista:
-    if num_max % num == 0:
-        div.append(num)
- 
-# Mostrar el resultado
-print(f"El número más grande es: {num_max}")
-print(f"Los divisores que se encuentran en la serie son: {', '.join(map(str, div))}")
+i = 0
+llista_divisors = []
+while i < len(llista):
+    if n % llista[i] == 0:
+        llista_divisors.append(llista[i])   
+    i += 1
+print("Número més gran: ",n," i els divisors: ",llista_divisors)
